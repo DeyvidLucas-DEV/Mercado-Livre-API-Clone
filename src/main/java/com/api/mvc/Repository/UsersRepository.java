@@ -3,12 +3,11 @@ package com.api.mvc.Repository;
 import com.api.mvc.entity.UsersEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface UsersRepository extends JpaRepository<UsersEntity, Long> {
 
-    List<UsersEntity> findByName(String name);
-    List<UsersEntity> findByEmail(String email);
+    Optional<UsersEntity> findByUsuario(String usuario);
 
 
 }
